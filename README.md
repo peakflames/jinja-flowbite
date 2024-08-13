@@ -8,7 +8,7 @@
     - Option 2: Add it to your `pyproject.toml` if you are using `poetry`
     - Option 3: Install to your global packages: `pip install jinja-flowbite`
 
-1. Register the `jinja-flowbite` package to the Flask runtime
+1. Register the `jinja_flowbite` package to the Flask runtime
 
     ```python
     from flask import Flask
@@ -38,7 +38,7 @@
         ".your_app_folder/templates/**/*.{html,jinja}",
         "./src/static/js/**/*.js",
         "./node_modules/flowbite/**/*.js",
-        "./venv/Lib/site-packages/jinja-flowbite/**/*.{html,jinja}",
+        "./venv/Lib/site-packages/jinja_flowbite/**/*.{html,jinja}",
     ],
     darkMode: 'class',
     theme: {
@@ -115,3 +115,11 @@
     <div>
     ```
 
+1. IMPORTANT - Rebuild the appliation's css file
+
+    - For example:
+
+       ```sh
+       npx tailwindcss -i ./{{ FLASK_APP_DIR_NAME }}/static/css/app.css -o ./{{ FLASK_APP_DIR_NAME }}/static/css/app.min.css"
+       ```
+  
