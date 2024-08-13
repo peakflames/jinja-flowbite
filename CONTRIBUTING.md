@@ -58,5 +58,8 @@ pip install -r requirements.txt
 1. Publish to PyPI
 
     ~~~sh
+    rm ./dist
+    rm ./build
+    python setup.py bdist_wheel
     py -m twine upload --repository pypi dist/* --verbose
     ~~~
