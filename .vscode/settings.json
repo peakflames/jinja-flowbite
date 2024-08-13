@@ -1,0 +1,39 @@
+{
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false,
+    "python.terminal.activateEnvironment": true,
+    "python.defaultInterpreterPath": "${env:VIRTUAL_ENV}",
+    "markdown.extension.toc.updateOnSave": false,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#5108f4",
+        "activityBar.background": "#5108f4",
+        "activityBar.foreground": "#e7e7e7",
+        "activityBar.inactiveForeground": "#e7e7e799",
+        "activityBarBadge.background": "#3e1402",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "commandCenter.border": "#e7e7e799",
+        "sash.hoverBorder": "#5108f4",
+        "statusBar.background": "#4106c3",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#5108f4",
+        "statusBarItem.remoteBackground": "#4106c3",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#4106c3",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#4106c399",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.color": "#4106c3",
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/*.egg-info": true
+    },
+    "cSpell.words": [
+        "Flowbite",
+        "htmx",
+        "jinjax",
+        "Schavey"
+    ]
+}

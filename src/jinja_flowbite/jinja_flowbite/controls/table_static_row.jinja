@@ -1,0 +1,8 @@
+{% macro render(class="", highlight_row_enabled=True) %}
+
+{% set highlight_row_enabled_classes = "hover:bg-gray-50 dark:hover:bg-gray-600" if highlight_row_enabled else "" %}
+<tr class="border border-gray-200 dark:border-gray-700 {{ highlight_row_enabled_classes }} {{ class }}" >
+    {{ caller () }}
+</tr>
+
+{% endmacro %}

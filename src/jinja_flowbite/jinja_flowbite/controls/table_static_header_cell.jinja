@@ -1,0 +1,11 @@
+{% macro render(text=None, class="") %}
+
+<th scope="col" class="p-2 font-medium tracking-wider align-top text-left text-gray-700 dark:text-white {{ class }}" >
+    {% if text is not none %}
+        {{ text }}
+    {% else %}
+        {{ caller() }}
+    {% endif %}
+</th>
+
+{% endmacro %}

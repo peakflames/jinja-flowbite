@@ -1,0 +1,43 @@
+{% macro render(
+    id="", 
+    class="", 
+    show_header=True,
+    show_header_subtitle=False,    
+    show_header_controls=True,
+    title="",
+    subtitle="",
+    title_text_size_class="text-lg",
+    subtitle_text_size_class="text-base", 
+    header_bg_class="bg-gray-50 dark:bg-gray-700",
+    enable_header_bg=False
+) %}
+
+
+{% set __header_bg_classes = header_bg_class if enable_header_bg else "" %}
+
+{% set __card_body_classes = "border-t border-gray-200 shadow-sm dark:border-gray-600" if enable_header_bg else "" %}
+
+
+<div id="{{ id }}" class="mb-4 xl:mb-2 pb-1 bg-white border border-gray-300 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 {{ class }}">
+    {% if show_header %}
+        <div id="card-header-{{ id }}" role="card-header-container" class="flex flex-col xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
+            <div class="g:mb-0">
+                <h3 class="font-bold text-gray-900 dark:text-white {{ title_text_size_class }}">{{ title }}</h3>
+                {% if show_header_subtitle %}
+                    <span class="font-normal text-gray-500 dark:text-gray-400 {{ subtitle_text_size_class }}">{{ subtitle }}</span>
+                {% endif %}
+            </div>
+            {% if show_header_controls %}
+                <div role="card-header-control-container" class="">
+                    {{ caller("header_controls") }}
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+
+    <div class="p-4 {{ __card_body_classes }}" >
+        {{ caller("body") }}
+    </div>
+</div>
+
+{% endmacro %}

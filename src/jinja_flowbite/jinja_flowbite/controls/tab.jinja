@@ -1,0 +1,31 @@
+{% macro render(id="", title="", class="", active=False, disabled=False, url="#") %}
+
+<li id="tab_{{id}}" class="me-2">
+
+    {% if disabled %}
+        
+        <a class="inline-block p-4 text-gray-400 rounded-t-lg cursor-not-allowed dark:text-gray-500">
+            {{title}}
+        </a>
+
+    {% elif active %}
+        
+        <a href="{{ url }}" class="inline-block p-4 text-blue-600 border-b-2 border-blue-600 rounded-t-lg active dark:text-blue-500 dark:border-blue-500" aria-current="page">
+            {{title}}
+        </a>    
+
+    {% else %}
+
+        <a href="{{ url }}" class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 {{ class }}">
+            {{title}}
+        </a>
+
+    {% endif %}
+
+    {% if caller %}
+        {{ caller() }}
+    {% endif %}
+    
+</li>
+
+{% endmacro %}

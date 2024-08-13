@@ -1,0 +1,42 @@
+{% macro renderTableBegin(class="") %}
+
+<div role="table-static" class="flex flex-col {{class}}">
+    <div class="overflow-x-auto">
+        <div class="inline-block min-w-full align-middle">
+            <div class="overflow-hidden shadow">
+                <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+
+{% endmacro %}
+
+
+{% macro thead_css(class="") %}
+border border-gray-200  dark:border-gray-700 bg-gray-200 dark:bg-gray-700 {{class}}
+{% endmacro %}
+
+{% macro th_css(class="") %}
+p-2 font-medium tracking-wider align-top text-left text-gray-700 dark:text-white {{class}}
+{% endmacro %}
+
+{% macro tbody_css(class="") %}
+bg-white dark:bg-gray-800 {{class}}
+{% endmacro %}
+
+{% macro tr_css(class="") %}
+border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 {{class}}
+{% endmacro %}
+
+{% macro td_css(class="") %}
+p-2 font-normal text-gray-500 dark:text-gray-400 {{class}}
+{% endmacro %}
+
+{% macro renderTableEnd() %}
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endmacro %}
+
+

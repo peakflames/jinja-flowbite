@@ -1,0 +1,62 @@
+{% import 'flowbite_jinja_htmx/controls/spinner.jinja' as Spinner %}
+{% import 'flowbite_jinja_htmx/controls/tooltip.jinja' as Tooltip %}
+
+{% macro render(
+    id="", 
+    text="", 
+    type="button", 
+    style="default", 
+    class="", 
+    disabled=False, 
+    tooltip=None, 
+    href=None, 
+    additional_attribs="",
+    padding="px-4 py-2",
+    spacing="space-x-1"
+) %}
+
+    {% set _base_css_classes = "hover:text-white dark:hover:text-white rounded-lg " %}
+    {% set _conditional_base_css_classes =  "border focus:ring-4 focus:outline-none font-medium text-sm text-center " %}
+    {% set _main_css_classes = _base_css_classes if text == "" and caller is none else _base_css_classes + _conditional_base_css_classes %}
+
+    {% set _primary_css_classes = _main_css_classes + "border-primary-700 hover:bg-primary-800 focus:ring-primary-300 text-primary-600 dark:border-primary-500 dark:text-primary-500 dark:hover:bg-primary-600 dark:focus:ring-primary-900" %}
+    {% set _default_css_classes = _main_css_classes + "border-gray-700 hover:bg-gray-800 focus:ring-gray-300 text-gray-600 dark:border-gray-500 dark:text-gray-500 dark:hover:bg-gray-600 dark:focus:ring-gray-900" %}
+    
+
+    {% if style == "spinner" %}
+
+        <button id="{{id}}" type="{{type}}" class="{{ _primary_css_classes }} {{ padding }} {{ spacing }} {{ class }}" disabled="true" >
+            {% set spinner_text = "Loading..." if text == "" else text %}
+            {{ Spinner.render(text=spinner_text) }}
+        </button>
+
+    {% else %}
+
+        {% set target_css_classes = _default_css_classes %}
+        {% set disabled_attr = "true" if disabled else "false"  %}
+
+        {% if style == "primary" %}
+            {% set target_css_classes = _primary_css_classes %}
+        {% endif %}
+
+        <div class="group">
+
+            {% if tooltip is not none %}
+                {{ Tooltip.render(text=tooltip) }}
+            {% endif %}
+
+
+            <button id="{{id}}" type="{{type}}" class="{{ target_css_classes }} {{ padding }} {{ spacing }} {{ class }}" disable="{{disabled_attr}}" {{additional_attribs}} >
+                {% if text %}
+                    {{ text }}    
+                {% endif %}
+                {% if caller %}
+                    {{ caller () }}    
+                {% endif %}
+            </button>
+
+        </div>
+
+    {% endif %}
+
+{% endmacro %}

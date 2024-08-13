@@ -1,0 +1,11 @@
+{% import "flowbite_jinja_htmx/icons/question_cicle.jinja" as QuestionCircleIcon %}
+{% import "flowbite_jinja_htmx/controls/tooltip.jinja" as Tooltip %}
+
+{% macro render(id="" text="" class="") %}
+
+<div id="{{ id }}" class="group {{ class }}">
+{{ Tooltip.render(text=text)}}
+{{ QuestionCircleIcon.render() }}
+</div>
+
+{% endmacro %}

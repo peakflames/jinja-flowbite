@@ -1,0 +1,26 @@
+{% macro render(
+id="",
+text="",
+type="button",
+style="default",
+class="",
+checked=False,
+disabled=False,
+additional_attribs=""
+) %}
+
+{% set disabled_attr = "true" if disabled else "false" %}
+
+{% if checked %}
+
+    <input checked="" id="{{ id }}" type="checkbox" value="" name="role" disable="{{disabled_attr}}" {{additional_attribs}}
+        class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+
+{% else %}
+
+    <input id="{{ id }}" type="checkbox" value="" name="role" disable="{{disabled_attr}}" {{additional_attribs}}
+        class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 {{ class }}">
+
+{% endif %}
+
+{% endmacro %}

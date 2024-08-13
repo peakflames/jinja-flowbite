@@ -1,0 +1,6 @@
+{% macro render(id="", text="", href="", new_tab=False, class="") %}
+
+{% set target = "_blank" if new_tab else "" %}
+<a id="{{id}}" href="{{ href }}" class="font-medium text-blue-600 dark:text-blue-500 hover:underline {{ class }}" target="{{target}}">{{text}}</a>
+
+{% endmacro %}
