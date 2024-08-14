@@ -8,7 +8,7 @@ with open("requirements.txt") as rq:
 
 setup(
     name="jinja_flowbite",
-    version="0.2.dev6",
+    version="0.3.dev0",
     platforms="any",
     description="Flowbite-Based Jinja Components",
     long_description=readme_md,
@@ -25,6 +25,7 @@ setup(
     package_data={
         "jinja_flowbite.jinja_flowbite.controls": ["*.jinja"],
         "jinja_flowbite.jinja_flowbite.icons": ["*.jinja"],
+        "jinja_flowbite.jinja_flowbite.layouts": ["*.jinja"],
     },
     classifiers=[],
     include_package_data=True,
