@@ -111,7 +111,7 @@ button
 .. code:: Jinja
 
     {% import "jinja_flowbite/controls/button.jinja" as flowbite_button %}
-    {% import "jinja_flowbite/icons/plus.jinja" as flowbite_plus %}
+    {% import "jinja_flowbite/icons/plus.jinja" as flowbite_plus_icon %}
 
     <div class="flex flex-col space-y-4">
         <div>
@@ -134,7 +134,7 @@ button
         <div>
             {% call flowbite_button.render( style="primary", tooltip="A tooltip") %}
                 <div class="flex items-center space-x-3">
-                    {{ flowbite_plus.render() }}
+                    {{ flowbite_plus_icon.render() }}
                     <p>Primary with Icon & Tooltip</p>
                 </div>
             {% endcall %}
@@ -191,6 +191,21 @@ card
         {% endif %}
     
     {% endcall %}
+
+
+.. |card_light| image:: /images/card-light.png
+   :scale: 100%
+
+.. |card_dark| image:: /images/card-dark.png
+   :scale: 100%
+
++--------------+----------------+
+| |card_light| | |card_dark|    |
++--------------+----------------+
+|  Light       | Dark           |
++--------------+----------------+
+
+
 
 
 +--------------------------+------+--------------------------------------------------------+
