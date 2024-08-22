@@ -1,6 +1,7 @@
 Controls
 ========
 
+.. _alert:
 
 alert
 ---------------------
@@ -9,11 +10,22 @@ alert
 
     {% import "jinja_flowbite/controls/alert.jinja" as flowbite_alert %}
 
-    {{ flowbite_alert.render(text="An error msg", type="danger") }}
-    {{ flowbite_alert.render(text="An warning msg", type="warning") }}
-    {{ flowbite_alert.render(text="An success msg", type="success") }}
+    {{ flowbite_alert.render(text="This is a success alert", type="success") }}
+    {{ flowbite_alert.render(text="This is a warning alert", type="warning") }}
+    {{ flowbite_alert.render(text="This is a failure alert", type="danger") }}
+    
 
+.. figure:: /images/alerts-light.png
+   :alt: Alerts Light
+   :align: center
 
+   Alerts (Light)
+
+.. figure:: /images/alerts-dark.png
+   :alt: Alerts Dark
+   :align: center
+
+   Alerts (Dark)
 
 +-----------+------+--------------------------------------------------------+
 | Attribute | Type | Description                                            |
@@ -99,45 +111,52 @@ button
 .. code:: Jinja
 
     {% import "jinja_flowbite/controls/button.jinja" as flowbite_button %}
+    {% import "jinja_flowbite/icons/plus.jinja" as flowbite_plus %}
 
-    {# Example of a simple button #}
-    {{ flowbite_button.render(text="Back", 
-                              style="primary", 
-                              additional_attribs="onclick='history.back()'") }}
-
-    {# Example of a simple button with an icon #}
-    {% call flowbite_button.render(type="submit", style="primary", class="w-full") %}
-        <div class="flex items-center space-x-3 justify-center whitespace-nowrap">
-            {{ flowbite_folder_icon.render() }}
-            <p>Open Folder</p>
+    <div class="flex flex-col space-y-4">
+        <div>
+            {{ flowbite_button.render( style="default", text="Default" ) }}
         </div>
-    {% endcall %}
+        <div>
+            {{ flowbite_button.render( style="primary", text="Primary" ) }}
+        </div>
+        <div>
+            {{ flowbite_button.render( style="primary", text="Primary (disabled)", disabled="true" ) }}
+        </div>
+        <div>
+            {% call flowbite_button.render(style="primary") %}
+                <div class="flex items-center space-x-3">
+                    {{ flowbite_plus.render() }}
+                    <p>Primary with Icon</p>
+                </div>
+            {% endcall %}
+        </div>
+        <div>
+            {% call flowbite_button.render( style="primary", tooltip="A tooltip") %}
+                <div class="flex items-center space-x-3">
+                    {{ flowbite_plus.render() }}
+                    <p>Primary with Icon & Tooltip</p>
+                </div>
+            {% endcall %}
+        </div>
+        <div>
+            {{ flowbite_button.render( style="spinner" ) }}
+        </div>
+        
+    </div>
 
+.. |buttons_light| image:: /images/buttons-light.gif
+   :scale: 100%
 
-+--------------------+------+--------------------------------------------------------+
-| Attribute          | Type | Description                                            |
-+====================+======+========================================================+
-| id                 | str  | Sets the div containers id attribute.                  |
-+--------------------+------+--------------------------------------------------------+
-|| style             || str || Supported values include:                             |
-||                   ||     || - `default`                                           |
-||                   ||     || - `primary`                                           |
-||                   ||     || - `spinner`                                           |
-+--------------------+------+--------------------------------------------------------+
-| type               | str  | default: button. HTML Button type enumeration          |
-+--------------------+------+--------------------------------------------------------+
-| class              | str  | Additional css classes to be appended to the component |
-+--------------------+------+--------------------------------------------------------+
-| tooltip            | str  | default: None. Display a tooltip with the button       |
-+--------------------+------+--------------------------------------------------------+
-| disabled           | bool | default: False.                                        |
-+--------------------+------+--------------------------------------------------------+
-| padding            | str  | default: `"px-4 py-2"`                                 |
-+--------------------+------+--------------------------------------------------------+
-| spacing            | str  | default: `"space-x-1"`                                 |
-+--------------------+------+--------------------------------------------------------+
-| additional_attribs | str  | raw html attributes pass to the element                |
-+--------------------+------+--------------------------------------------------------+
+.. |buttons_dark| image:: /images/buttons-dark.gif
+   :scale: 100%
+
++-----------------+----------------+
+| |buttons_light| | |buttons_dark| |
++-----------------+----------------+
+|  Light          | Dark           |
++-----------------+----------------+
+
 
 
 
