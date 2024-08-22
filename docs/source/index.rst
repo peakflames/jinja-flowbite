@@ -1,7 +1,8 @@
 Jinja Flowbite documentation
 ===================================
 
-**Jinja Flowbite** is a Python library for ....
+**Jinja Flowbite** is a Python library that packages a collection of `Flowbite <https://flowbite.com/>`_
+components as Jinja macros.
 
 Check out the :doc:`usage` section for further information, including
 how to :ref:`installation` the project.
@@ -16,4 +17,4 @@ Contents
 .. toctree::
 
    usage
-   api
+   controls
