@@ -18,7 +18,7 @@
 {% set __card_body_classes = "border-t border-gray-200 shadow-sm dark:border-gray-600" if enable_header_bg else "" %}
 
 
-<div id="{{ id }}" class="mb-4 xl:mb-2 pb-1 bg-white border border-gray-300 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 {{ class }}">
+<div id="{{ id }}" class="xl:mb-2 pb-1 bg-white border border-gray-300 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 {{ class }}">
     {% if show_header %}
         <div id="card-header-{{ id }}" role="card-header-container" class="flex flex-col xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
             <div class="g:mb-0">
