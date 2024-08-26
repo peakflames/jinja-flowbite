@@ -1,6 +1,12 @@
 # Flowbite-Based Jinja Components
 
+A collection of Flowbite component developed as Jinja Layout Templates and Macros.
+
 ## Getting Started for Flask
+
+For a pre-configured starter repo both web and desktop app, goto: <https://github.com/schaveyt/jinja-flowbite-web-desktop-demo>
+
+Otherwise start from scratch following the steps below:
 
 1. Add the `jinja-flowbite` package to your python environment
 
