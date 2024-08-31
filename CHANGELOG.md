@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.3.dev6
+
+- fix toast content spacing
+
 ## 0.3.dev5
 
 - fix toast border

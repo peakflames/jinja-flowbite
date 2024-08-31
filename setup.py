@@ -8,7 +8,7 @@ with open("requirements.txt") as rq:
 
 setup(
     name="jinja_flowbite",
-    version="0.3.dev5",
+    version="0.3.dev6",
     platforms="any",
     description="Flowbite-Based Jinja Components",
     long_description=readme_md,
