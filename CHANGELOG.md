@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.3.dev5
+
+- fix toast border
+
 ## 0.3.dev4
 
 - fix toast bg color
