@@ -32,6 +32,7 @@
         "**/*.egg-info": true
     },
     "cSpell.words": [
+        "endcall",
         "Flowbite",
         "htmx",
         "jinjax",
