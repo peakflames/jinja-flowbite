@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.3.dev4
+
+- fix toast bg color
+
 ## 0.3.dev3
 
 - Add tab components that switch based anchor/query string: `tab_control_anchor` & `tab_anchor`
