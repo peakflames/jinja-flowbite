@@ -5,7 +5,12 @@
     "python.terminal.activateEnvironment": true,
     "python.defaultInterpreterPath": "${env:VIRTUAL_ENV}",
     "markdown.extension.toc.updateOnSave": false,
+    "markdown.extension.orderedList.autoRenumber": false,
     "markdown.extension.orderedList.marker": "one",
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnPaste": true
+    },
     "workbench.colorCustomizations": {
         "activityBar.activeBackground": "#5108f4",
         "activityBar.background": "#5108f4",
