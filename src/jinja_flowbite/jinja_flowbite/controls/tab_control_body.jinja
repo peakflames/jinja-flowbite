@@ -1,0 +1,11 @@
+{% macro render(id) %}
+
+<div id="{{id}}">
+
+    {% if caller %}
+        {{ caller() }}
+    {% endif %}
+    
+</div>
+
+{% endmacro %}
