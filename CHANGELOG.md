@@ -1,5 +1,13 @@
 # Jinja Flowbite
 
+## 0.3.dev8
+
+- remove the `p-4` from the `<main>` element of the stacked layout to all for more user control of the layout
+
+## 0.3.dev7
+
+- update input_text to support pattern attribute
+  
 ## 0.3.dev6
 
 - fix toast content spacing
