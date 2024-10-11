@@ -1,9 +1,26 @@
-{% macro render(id="", name="", value="", class="", required=False, placeholder="", pattern=None, additional_attribs="") %}
+{% macro render(id="", name="", value="", class="", required=False, placeholder="", pattern=None, disabled=False, additional_attribs="") %}
+
+
+{% set class_values = "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %}
+{% if disabled %}
+    {% set class_values = "bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 cursor-not-allowed dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500" %}
+{% endif %}
+
 
 {% if pattern %}
-    <input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" required={{required}} placeholder="{{placeholder}}" pattern="{{pattern}}" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 {{class}}"  {{additional_attribs}} >
+    {% if disabled %}
+        <input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" required={{required}} placeholder="{{placeholder}}" pattern="{{pattern}}" class="{{class_values}} {{class}}" disabled readonly aria-label="disabled input" {{additional_attribs}} >
+    {% else %}        
+        <input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" required={{required}} placeholder="{{placeholder}}" pattern="{{pattern}}" class="{{class_values}} {{class}}"  {{additional_attribs}} >
+    {% endif %}
 {% else %}
-    <input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" required={{required}} placeholder="{{placeholder}}" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 {{class}}"  {{additional_attribs}} >
+    {% if disabled %}
+        <input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" required={{required}} placeholder="{{placeholder}}" class="{{class_values}} {{class}}" disabled  readonly aria-label="disabled input" {{additional_attribs}} >
+    {% else %}        
+        <input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" required={{required}} placeholder="{{placeholder}}" class="{{class_values}} {{class}}"  {{additional_attribs}} >
+    {% endif %}
 {% endif %}
+
+
 
 {% endmacro %}
