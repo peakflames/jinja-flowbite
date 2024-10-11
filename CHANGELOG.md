@@ -1,6 +1,10 @@
 # Jinja Flowbite
 
-## 0.3.dev8
+## 0.4.dev2
+
+- `components/input_text.jinja` now supports `readonly` and `disabled` attributes
+
+## 0.4.dev1
 
 - remove the `p-4` from the `<main>` element of the stacked layout to all for more user control of the layout
 
