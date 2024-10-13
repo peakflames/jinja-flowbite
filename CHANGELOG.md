@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.4.dev3
+
+- bug - fix issue with pattern attribute not working for input_text
+
 ## 0.4.dev2
 
 - `components/input_text.jinja` now supports `readonly` and `disabled` attributes
