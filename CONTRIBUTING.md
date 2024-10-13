@@ -57,9 +57,10 @@ pip install -r requirements.txt
 
 1. Publish to PyPI
 
-    ~~~sh
-    rm ./dist
-    rm ./build
-    python setup.py bdist_wheel
-    py -m twine upload --repository pypi dist/* --verbose
-    ~~~
+    1. Update the version number in `setup.py`
+    1. Run the following command
+
+        ~~~sh
+        .\venv\Scripts\activate
+        .\publish.ps1
+        ~~~
