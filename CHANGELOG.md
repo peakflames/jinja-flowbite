@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.4.dev4
+
+- icon - add arrow_up_right.jinja
+
 ## 0.4.dev3
 
 - bug - fix issue with pattern attribute not working for input_text
