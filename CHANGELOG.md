@@ -1,5 +1,16 @@
 # Jinja Flowbite
 
+## 0.4.dev5
+
+- icon - add adjustments_horizontal.jinja
+- icon - add adjustments_vertical.jinja
+- icon - add annotation.jinja
+- icon - add archive.jinja
+- icon - add award.jinja
+- icon - add badge_check.jinja
+- icon - add play.jinja
+- icon - add play_solid.jinja
+
 ## 0.4.dev4
 
 - icon - add arrow_up_right.jinja
