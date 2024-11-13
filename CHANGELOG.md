@@ -1,5 +1,14 @@
 # Jinja Flowbite
 
+## 0.4.dev6
+
+- icon - add angle_left.jinja
+- icon - add angle_right.jinja
+- icon - add angle_up.jinja
+- icon - add arrow_left.jinja
+- icon - add arrow_right.jinja
+- icon - add expand.jinja
+
 ## 0.4.dev5
 
 - icon - add adjustments_horizontal.jinja
