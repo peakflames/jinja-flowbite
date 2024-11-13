@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.4.dev7
+
+- layout - updated main_layout and stacked_layout to use `flowbite_header_content_center_outlet` block to allow for center content in header
+
 ## 0.4.dev6
 
 - icon - add angle_left.jinja
