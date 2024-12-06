@@ -1,6 +1,6 @@
-{% macro render(id="", name="", class="", required=False) %}
+{% macro render(id="", name="", class="", disabled=False, required=False, additional_attribs="") %}
 
-<select id="{{id}}" name="{{name}}" required={{required}} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 {{class}}">
+<select id="{{id}}" name="{{name}}" {% if disabled %} disabled {% endif %} {% if required %} required {% endif %} class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 {{class}}" {{additional_attribs}}>
     {{ caller() }}
 </select>
 
