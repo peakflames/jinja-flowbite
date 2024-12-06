@@ -1,5 +1,13 @@
 # Jinja Flowbite
 
+## 0.4.dev8
+
+- controls - Conditionally add the Boolean attributes for the following input controls (PR #2):
+  - input_text.jinja
+  - select.jinja
+  - checkbox.jinja
+- icons - add close.jinja icon
+
 ## 0.4.dev7
 
 - layout - updated main_layout and stacked_layout to use `flowbite_header_content_center_outlet` block to allow for center content in header
