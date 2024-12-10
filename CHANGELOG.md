@@ -1,16 +1,20 @@
 # Jinja Flowbite
 
+## 0.4.dev10
+
+- controls: fixed bug in `toggle_switch.jinja`
+
 ## 0.4.dev9
 
-- controls: added toggle_switch.jinja
+- controls: added `toggle_switch.jinja`
 
 ## 0.4.dev8
 
 - controls - Conditionally add the Boolean attributes for the following input controls (PR #2):
-  - input_text.jinja
-  - select.jinja
-  - checkbox.jinja
-- icons - add close.jinja icon
+  - `input_text.jinja`
+  - `select.jinja`
+  - `checkbox.jinja`
+- icons - add `close.jinja` icon
 
 ## 0.4.dev7
 
