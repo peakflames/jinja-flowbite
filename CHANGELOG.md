@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.4.dev12
+
+- controls: fix bug in `table_static_row_cell.jinja`
+
 ## 0.4.dev11
 
 - controls: improved table_static_* to apply identifiers and correct jinja syntax. This was required
