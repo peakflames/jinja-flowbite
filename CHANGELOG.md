@@ -1,5 +1,10 @@
 # Jinja Flowbite
 
+## 0.4.dev11
+
+- controls: improved table_static_* to apply identifiers and correct jinja syntax. This was required
+  to support htmx interactions.
+
 ## 0.4.dev10
 
 - controls: fixed bug in `toggle_switch.jinja`

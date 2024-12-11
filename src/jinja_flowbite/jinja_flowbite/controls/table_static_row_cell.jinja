@@ -1,4 +1,5 @@
 {% macro render(
+    id="",
     text=None,
     class="",
     row_span=1,
@@ -6,8 +7,8 @@
     word_wrap=False
 ) %}
 
-{% set word_wrap_class = "" if word_wrap else "whitespace-nowrap" %}
-<td class="p-2 font-normal align-top text-gray-500 dark:text-gray-400 {{ word_wrap_class }} {{ class }}" colspan={{col_span}} rowspan={{col_span}} >
+{% set word_wrap_class = "white" if word_wrap else "whitespace-nowrap" %}
+<td id="{{id}}" class="{{ "%s p-2 font-normal align-top text-gray-500 dark:text-gray-400 %s"|format(classx, word_wrap_class) }}" colspan="{{col_span}}" rowspan="{{col_span}}" >
     {% if text is not none %}
         {{ text }}
     {% else %}

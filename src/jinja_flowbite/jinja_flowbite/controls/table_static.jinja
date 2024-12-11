@@ -1,6 +1,6 @@
-{% macro render(class="") %}
+{% macro render(id="", class="") %}
 
-<div role="table-static" class="flex flex-col {{ class }}">
+<div id="{{id}}" role="table-static" class="flex flex-col {{ class }}">
     <div class="overflow-x-auto">
         <div class="inline-block min-w-full align-middle">
         <div class="overflow-hidden shadow">

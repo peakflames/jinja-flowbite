@@ -1,6 +1,6 @@
-{% macro render(text=None, class="") %}
+{% macro render(id="", text=None, class="") %}
 
-<th scope="col" class="p-2 font-medium tracking-wider align-top text-left text-gray-700 dark:text-white {{ class }}" >
+<th id="{{id}}" scope="col" class="{{ "%s p-2 font-medium tracking-wider align-top text-left text-gray-700 dark:text-white"|format(class) }}" >
     {% if text is not none %}
         {{ text }}
     {% else %}
