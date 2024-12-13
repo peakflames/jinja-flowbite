@@ -20,8 +20,8 @@
 
 <div id="{{ id }}" class="xl:mb-2 pb-1 bg-white border border-gray-300 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 {{ class }}">
     {% if show_header %}
-        <div id="card-header-{{ id }}" role="card-header-container" class="flex flex-col xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
-            <div class="g:mb-0">
+        <div id="card-header-{{ id }}" role="card-header-container" class="flex xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
+            <div class="flex flex-col g:mb-0">
                 <h3 class="font-bold text-gray-900 dark:text-white {{ title_text_size_class }}">{{ title }}</h3>
                 {% if show_header_subtitle %}
                     <span class="font-normal text-gray-500 dark:text-gray-400 {{ subtitle_text_size_class }}">{{ subtitle }}</span>
