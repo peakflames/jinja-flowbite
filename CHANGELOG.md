@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.4.dev13
+
+- controls: card.jinja. Added `controls_valign_class` to allow the use to control the card controls vertical alignment [PR #3](https://github.com/tschaffter/jinja-flowbite/pull/3)
+
 ## 0.4.dev12
 
 - controls: fix bug in `table_static_row_cell.jinja`
