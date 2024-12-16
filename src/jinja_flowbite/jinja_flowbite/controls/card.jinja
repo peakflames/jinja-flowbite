@@ -9,7 +9,8 @@
     title_text_size_class="text-lg",
     subtitle_text_size_class="text-base", 
     header_bg_class="bg-gray-50 dark:bg-gray-700",
-    enable_header_bg=False
+    enable_header_bg=False,
+    keep_header_controls_on_right=False
 ) %}
 
 
@@ -17,11 +18,13 @@
 
 {% set __card_body_classes = "border-t border-gray-200 shadow-sm dark:border-gray-600" if enable_header_bg else "" %}
 
+{% set __header_flex_col_all = "" if keep_header_controls_on_right else "flex-col" %}
+{% set __header_flex_col_title = "flex flex-col" if keep_header_controls_on_right else "" %}
 
 <div id="{{ id }}" class="xl:mb-2 pb-1 bg-white border border-gray-300 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 {{ class }}">
     {% if show_header %}
-        <div id="card-header-{{ id }}" role="card-header-container" class="flex xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
-            <div class="flex flex-col g:mb-0">
+        <div id="card-header-{{ id }}" role="card-header-container" class="flex {{ __header_flex_col_all }} xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
+            <div class=" {{ __header_flex_col_title }} g:mb-0">
                 <h3 class="font-bold text-gray-900 dark:text-white {{ title_text_size_class }}">{{ title }}</h3>
                 {% if show_header_subtitle %}
                     <span class="font-normal text-gray-500 dark:text-gray-400 {{ subtitle_text_size_class }}">{{ subtitle }}</span>
