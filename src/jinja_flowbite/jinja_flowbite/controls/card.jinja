@@ -4,6 +4,7 @@
     show_header=True,
     show_header_subtitle=False,    
     show_header_controls=True,
+    controls_valign_class="justify-start",
     title="",
     subtitle="",
     title_text_size_class="text-lg",
@@ -20,7 +21,7 @@
 
 <div id="{{ id }}" class="xl:mb-2 pb-1 bg-white border border-gray-300 rounded-lg shadow-md dark:border-gray-700 dark:bg-gray-800 {{ class }}">
     {% if show_header %}
-        <div id="card-header-{{ id }}" role="card-header-container" class="flex flex-col xl:flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
+        <div id="card-header-{{ id }}" role="card-header-container" class="flex flex-row px-4 py-2 justify-between rounded-t-lg {{ __header_bg_classes }}">
             <div class="g:mb-0">
                 <h3 class="font-bold text-gray-900 dark:text-white {{ title_text_size_class }}">{{ title }}</h3>
                 {% if show_header_subtitle %}
@@ -28,7 +29,7 @@
                 {% endif %}
             </div>
             {% if show_header_controls %}
-                <div role="card-header-control-container" class="">
+                <div role="card-header-control-container" class="flex flex-col {{controls_valign_class}}">
                     {{ caller("header_controls") }}
                 </div>
             {% endif %}
