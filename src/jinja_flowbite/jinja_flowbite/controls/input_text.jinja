@@ -8,6 +8,7 @@
     disabled=False,
     readonly=False,
     required=False,
+    is_password=False,
     additional_attribs=""
 ) %}
 
@@ -28,8 +29,9 @@
     {% set additional_attribs = additional_attribs + " pattern=\"" + pattern + "\"" %}
 {% endif %}
 
+{% set type_value = "password" if is_password else "text"%}
 
-<input id="{{id}}" type="text" name="{{name}}" value="{{ value }}" {% if required %} required {% endif %} placeholder="{{placeholder}}" class="{{class_values}} {{class}}"  {{additional_attribs}}>
+<input id="{{id}}" type="{{type_value}}" name="{{name}}" value="{{ value }}" {% if required %} required {% endif %} placeholder="{{placeholder}}" class="{{class_values}} {{class}}"  {{additional_attribs}}>
 
 
 {% endmacro %}

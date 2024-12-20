@@ -1,5 +1,9 @@
 # Jinja Flowbite
 
+## 0.4.dev14
+
+- controls: input_text.jinja. Added `is_password` prop to support password capture
+
 ## 0.4.dev13
 
 - controls: card.jinja. Added `controls_valign_class` to allow the use to control the card controls vertical alignment [PR #3](https://github.com/tschaffter/jinja-flowbite/pull/3)
