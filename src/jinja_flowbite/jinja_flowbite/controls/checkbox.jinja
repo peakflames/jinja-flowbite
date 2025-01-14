@@ -1,6 +1,7 @@
 {% macro render(
 id="",
-text="",
+value="",
+name="",
 type="button",
 style="default",
 class="",
@@ -10,7 +11,7 @@ required=False,
 additional_attribs=""
 ) %}
 
-<input {% if checked %} checked {% endif %} id="{{ id }}" type="checkbox" value="" name="role" {% if disabled %} disabled {% endif %} {% if required %} required {% endif %} {{additional_attribs}}
+<input {% if checked %} checked {% endif %} id="{{ id }}" type="checkbox" value="{{value}}" name="{{name}}" {% if disabled %} disabled {% endif %} {% if required %} required {% endif %} {{additional_attribs}}
     class="w-4 h-4 bg-gray-100 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:focus:ring-primary-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 {{ class }}">
 
 {% endmacro %}
