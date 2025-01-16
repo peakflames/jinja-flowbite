@@ -1,5 +1,13 @@
 # Jinja Flowbite
 
+## 0.4.dev15
+
+- controls [PR #4](https://github.com/tschaffter/jinja-flowbite/pull/4)
+  - Adds radio form control with option for vertical or in-line alignment.
+  - Fixes circle_plus.jinja to be a circle plus instead of a circle with chevron arrow.
+  - Allows configuring the value and name of a checkbox
+  - Adds trash bin icon
+
 ## 0.4.dev14
 
 - controls: input_text.jinja. Added `is_password` prop to support password capture
