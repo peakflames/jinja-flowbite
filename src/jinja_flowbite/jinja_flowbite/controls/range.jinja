@@ -1,0 +1,34 @@
+{% macro render(id="",
+                name="",
+                size='default',
+                min="1",
+                max="100",
+                step="1",
+                value="50",
+                class="",
+                disabled=False,
+                additional_attribs="") %}
+
+{#
+Valid sizes: small, large
+Will use default size if small or large is not given.
+#}
+{% set size_class = 'h-2' %}
+{% if size == 'small' %}
+    {% set size_class = 'h-1 range-sm' %}
+{% elif size == 'large' %}
+    {% set size_class = 'h-3 range-lg' %}
+{% endif %}
+
+<input id="{{id}}"
+       name="{{name}}"
+       type="range"
+       min="{{min}}"
+       max="{{max}}"
+       value="{{value}}"
+       step="{{step}}"
+       class="w-full {{size_class}} bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700 {{class}}"
+       {{ additional_attribs }}
+       {% if disabled %} disabled {% endif %}>
+
+{% endmacro %}
