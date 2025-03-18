@@ -1,5 +1,17 @@
 # Jinja Flowbite
 
+## 0.4.dev16
+
+- Add the following control from Flowbite: (AMoyer)
+  - Range input
+- Add the following icons from Flowbite: (AMoyer)
+  - bug
+  - circle_check
+  - edit
+  - messages
+- Update to assign an ID to toggle switches (AMoyer)
+- Update to allow user to define whitespace behavior for toast messages. (AMoyer)
+
 ## 0.4.dev15
 
 - controls [PR #4](https://github.com/tschaffter/jinja-flowbite/pull/4)
