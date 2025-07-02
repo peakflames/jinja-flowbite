@@ -3,8 +3,10 @@
 <li id="tab_{{id}}" class="me-2" role="presentation">
 
     {% set target_css_classes = "inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300" %}
+    {% set selected='false' %}
     {% if active %}
         {% set target_css_classes = "inline-block p-4 border-b-2 rounded-t-lg" %}
+        {% set selected='true' %}
     {% endif %}
 
     <button class="{{target_css_classes}}" 
@@ -13,7 +15,7 @@
                 type="button"
                 role="tab"
                 aria-controls="{{id}}"
-                aria-selected="false">{{title}}</button>
+                aria-selected="{{selected}}">{{title}}</button>
     
 </li>
 
