@@ -55,6 +55,8 @@ pip install -r requirements.txt
     password = pypi-**********
     ~~~
 
+1. Update CHANGELOG.md
+
 1. Publish to PyPI
 
     1. Update the version number in `setup.py`

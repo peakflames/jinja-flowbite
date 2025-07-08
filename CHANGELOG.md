@@ -1,5 +1,14 @@
 # Jinja Flowbite
 
+## 0.4.dev17
+
+- Add the following icons from Flowbite: (AMoyer) PR #6
+  - copy_file
+  - copy_file_alt
+  - search
+- Improved tab control PR #6
+- Support for multi-select PR #6
+
 ## 0.4.dev16
 
 - Add the following control from Flowbite: (AMoyer)
